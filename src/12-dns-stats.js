@@ -22,10 +22,11 @@
  */
 function getDNSStats(domains) {
   const obj = {};
-  for (const i of domains) {
+  for (let i = 0; i <= domains.length - 1; i++) {
     let str = '';
-    for (const n of i.split('.').reverse()) {
-      str += `.${n}`;
+    const current = domains[i].split('.').reverse();
+    for (let n = 0; n <= current.length - 1; n++) {
+      str += `.${current[n]}`;
       if (!(str in obj)) {
         obj[str] = 1;
       } else {

@@ -20,12 +20,11 @@ class Stack {
   }
 
   pop() {
-    if (this.arr.length > 0) { this.arr.pop(); }
-    return undefined;
+    return this.arr.pop();
   }
 
   peek() {
-    if (this.arr.length > 0) { return this.arr[0]; }
+    if (this.arr.length > 0) { return this.arr[this.arr.length - 1]; }
     return 1;
   }
 }

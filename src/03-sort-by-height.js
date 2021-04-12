@@ -12,8 +12,8 @@
 function sortByHeight(arr) {
   const newArr = arr.filter((i) => i !== -1).sort((a, b) => a - b);
   const result = [];
-  for (const i of arr) {
-    if (i !== -1) {
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (arr[i] !== -1) {
       result.push(newArr[0]);
       newArr.splice(0, 1);
     } else {

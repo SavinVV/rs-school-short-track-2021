@@ -13,7 +13,11 @@
 function getSumOfDigits(n) {
   let res = n;
   while (res > 9) {
-    res = Array.from(String(res), Number).reduce((sum, current) => sum += current);
+    res = Array.from(String(res), Number).reduce((s, current) => {
+      let sum = s;
+      sum += current;
+      return sum;
+    });
   }
   return res;
 }

@@ -18,7 +18,7 @@ function deleteDigit(n) {
       max = current;
     }
   });
-  return max;
+  return +max;
 }
 
 module.exports = deleteDigit;

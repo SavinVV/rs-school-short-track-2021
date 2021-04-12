@@ -13,13 +13,14 @@
 //   throw new Error('Not implemented');
 // }
 function getCommonCharacterCount(s1, s2) {
-  const arr = s2.split('');
+  const arr1 = s1.split('');
+  const arr2 = s2.split('');
   let count = 0;
-  for (const i of s1.split('')) {
-    const index = arr.indexOf(i);
+  for (let i = 0; i <= arr1.length - 1; i++) {
+    const index = arr2.indexOf(arr1[i]);
     if (index >= 0) {
       count++;
-      arr.splice(index, 1);
+      arr2.splice(index, 1);
     }
   }
   return count;

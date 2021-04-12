@@ -13,6 +13,7 @@
  * the output should be ["file", "file(1)", "image", "file(1)(1)", "file(2)"]
  *
  */
+
 function renameFiles(name) {
   const result = [];
   name.forEach((e) => {
@@ -22,11 +23,11 @@ function renameFiles(name) {
       let current = e;
       let conter = 0;
       while (result.indexOf(current) >= 0) {
-        result.forEach((i) => {
-          if (e === i) {
+        for (let i = 0; i <= result.length - 1; i++) {
+          if (e === result[i]) {
             conter++;
           }
-        });
+        }
         current = `${e}(${conter})`;
       }
       result.push(current);

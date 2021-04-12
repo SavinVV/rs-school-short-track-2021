@@ -10,13 +10,13 @@
  */
 function encodeLine(str) {
   const result = [];
-  for (const i of str) {
-    if (result.indexOf(i) < 0) {
-      const counter = str.split('').filter((e) => e === i).length;
-      result.push(counter, i);
+  for (let i = 0; i <= str.length - 1; i++) {
+    if (result.indexOf(str[i]) < 0) {
+      const counter = str.split('').filter((e) => e === str[i]).length;
+      result.push(counter, str[i]);
     }
   }
-  return result.join('');
+  return result.join('').split('1').join('');
 }
 
 module.exports = encodeLine;
