@@ -25,7 +25,7 @@ function getDNSStats(domains) {
   for (const i of domains) {
     let str = '';
     for (const n of i.split('.').reverse()) {
-      str += '.' + n;
+      str += `.${n}`;
       if (!(str in obj)) {
         obj[str] = 1;
       } else {
